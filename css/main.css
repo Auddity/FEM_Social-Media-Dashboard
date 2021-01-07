@@ -1,0 +1,326 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header .theme, .totals-card, .totals-card .social-handle, .today-card, .today-card-top, .today-card-bottom, .today-card-bottom .change-today {
+  display: flex;
+  align-items: center;
+}
+
+.totals, .today-cards {
+  display: grid;
+}
+
+.container {
+  height: 100%;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.handle {
+  color: #1e202a;
+}
+
+.pos {
+  color: #1cb58a;
+}
+
+.neg {
+  color: #dc414c;
+}
+
+.fb {
+  background-color: #198ff5;
+}
+
+.twt {
+  background-color: #1ca0f2;
+}
+
+.insta {
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.yt {
+  background-color: #c4032a;
+}
+
+.inlarge {
+  width: 25px;
+  height: 25px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100%;
+  max-width: 100vw;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 210px;
+  width: 100%;
+  background-color: #f5f7ff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: -1;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark::before {
+  background-color: #1f212e;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark {
+  background-color: #1e202a;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark header h1 {
+  color: #f0f2fa;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark header p {
+  color: #8b97c6;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark header .theme-slider {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark header .dot {
+  left: 3px;
+  background-color: #252a41;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark .totals-card {
+  background-color: #252a41;
+  color: #f0f2fa;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark .totals-card .social-handle p, body.dark .totals-card .social-followers p {
+  color: #8b97c6;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark .today h2 {
+  color: #f0f2fa;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark .today-card {
+  background-color: #252a41;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark .today-card p {
+  color: #8b97c6;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+body.dark .today-card span.quantity {
+  color: #f0f2fa;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+header {
+  position: relative;
+  background-color: transparent;
+}
+
+header .header-content {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #aeb3cb;
+}
+
+header .header-content h1 {
+  color: #1e202a;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+header .header-content p {
+  color: #63687e;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+header .header-content p span {
+  font-weight: 700;
+}
+
+header .theme {
+  margin: 1rem 0 2rem;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 900px) {
+  header .theme {
+    justify-content: flex-end;
+  }
+}
+
+header .theme p {
+  margin-right: 1.5rem;
+}
+
+header .theme-slider {
+  width: 58px;
+  height: 28px;
+  border-radius: 25px;
+  background-color: #aeb3cb;
+  transition: color 2.5s ease, background-color 2.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+header .theme-slider .dot {
+  width: 22px;
+  height: 22px;
+  background-color: #f0f2fa;
+  transition: color 2.5s ease, background-color 2.5s ease;
+  border-radius: 50%;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.totals {
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 928px) {
+  .totals {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.totals-card {
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f2fa;
+  color: #1e202a;
+  padding: 2.2rem 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+.totals-card .color-bar {
+  position: absolute;
+  top: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.totals-card .social-handle {
+  justify-content: center;
+  padding: .7rem 0;
+}
+
+.totals-card .social-handle img {
+  margin-right: .5rem;
+}
+
+.totals-card .social-followers {
+  padding: .7rem 0;
+}
+
+.totals-card .social-followers .quantity {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.totals-card .social-followers p {
+  letter-spacing: .4rem;
+  font-weight: 400;
+}
+
+.totals-card .change {
+  display: flex;
+  line-height: 4px;
+  margin-top: 1.5rem;
+}
+
+.totals-card .change img {
+  margin-right: .3rem;
+}
+
+.today {
+  margin: 1.5rem 0 3rem;
+}
+
+.today h2 {
+  padding-bottom: 1.5rem;
+  color: #63687e;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+.today-cards {
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 928px) {
+  .today-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.today-card {
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f2fa;
+  gap: 1.5rem;
+  padding: 1.6rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+@media only screen and (min-width: 928px) {
+  .today-card {
+    margin-bottom: 0;
+  }
+}
+
+.today-card-top {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.today-card-bottom {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.today-card-bottom .quantity {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.today-card-bottom .change-today img {
+  margin-right: .2rem;
+}

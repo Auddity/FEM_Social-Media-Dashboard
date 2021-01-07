@@ -1,0 +1,95 @@
+$limeGreen: hsl(163, 73%, 41%);
+$brightRed: hsl(356, 69%, 56%);
+$white: hsl(0, 0%, 100%);
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: hsl(348, 97%, 39%);
+// Light Themed Colors
+$lightThemeToggle: hsl(230, 22%, 74%);
+$veryPaleBlue-bgTop: hsl(225, 100%, 98%);
+$lightGrayishBlue: hsl(227, 47%, 96%);
+$darkGrayishBlue-text: hsl(228, 12%, 44%);
+$veryDarkBlue-text: hsl(230, 17%, 14%);
+// Dark Themed Colors
+$darkThemeToggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$veryDarkBlue-bg: hsl(230, 17%, 14%);
+$veryDarkBlue-bgTop: hsl(232, 19%, 15%);
+$darkDesatBlue: hsl(228, 28%, 20%);
+$desatBlue-text: hsl(228, 34%, 66%);
+
+$font-stack: 'Inter', sans-serif;
+
+// Reset
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Functions
+@function primary-text($color) {
+  @if(lightness($color) < 50) {
+    @return $lightGrayishBlue;
+  } @else {
+    @return $veryDarkBlue-text;
+  }
+}
+
+@function secondary-text($color) {
+  @if(lightness($color) < 50) {
+    @return $desatBlue-text;
+  } @else {
+    @return $darkGrayishBlue-text;
+  }
+}
+
+// Flex Mixin
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  justify-content: center;
+}
+
+@mixin flexColumn {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flexSpread {
+  @extend %flex;
+  justify-content: space-between;
+}
+
+// Grid Mixin
+%grid {
+  display: grid;
+}
+
+@mixin mobileGrid {
+  @extend %grid;
+  grid-template-columns: 1fr;
+}
+
+@mixin desktopGrid {
+  // @extend %grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+// Transition Mixins
+@mixin transition {
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
+// Media Query Mixin
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

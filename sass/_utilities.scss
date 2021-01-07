@@ -1,0 +1,50 @@
+.container {
+  height: 100%;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+// Text styles
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.handle {
+  color: primary-text($white);
+}
+
+// color styles
+.pos {
+  color: $limeGreen;
+}
+
+.neg {
+  color: $brightRed;
+}
+
+// bar-colors
+.fb {
+  background-color: $facebook;
+}
+
+.twt {
+  background-color: $twitter;
+}
+
+.insta {
+  background-image: $instagram;
+}
+
+.yt {
+  background-color: $youtube;
+}
+
+// logo size adjust 
+.inlarge {
+  width: 25px;
+  height: 25px;
+}
