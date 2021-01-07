@@ -248,9 +248,9 @@ header {
     margin-bottom: 1rem;
     @include transition;
 
-    // p, span {
-    //   @include transition;
-    // }
+    p, span {
+      @include transition;
+    }
 
     @include mq(928px) {
       margin-bottom: 0;

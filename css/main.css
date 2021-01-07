@@ -300,6 +300,10 @@ header .theme-slider .dot {
   transition: color 2.5s ease, background-color 2.5s ease;
 }
 
+.today-card p, .today-card span {
+  transition: color 2.5s ease, background-color 2.5s ease;
+}
+
 @media only screen and (min-width: 928px) {
   .today-card {
     margin-bottom: 0;
