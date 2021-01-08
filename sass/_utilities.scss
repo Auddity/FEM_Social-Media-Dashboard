@@ -48,3 +48,23 @@
   width: 25px;
   height: 25px;
 }
+
+// Active States Dark
+body.dark {
+  .totals-card:hover, .today-card:hover {
+    background-color: $darkThemeHover;
+    transform: scale(.99);
+    cursor: pointer;
+  }
+}
+
+// Active States Light
+.totals-card:hover, .today-card:hover {
+  background-color: $lightThemeHover;
+  transform: scale(.99);
+  cursor: pointer;
+}
+
+.theme-slider:hover {
+  background-image: $darkThemeToggle;
+}

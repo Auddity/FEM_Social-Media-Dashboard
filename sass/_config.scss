@@ -18,6 +18,9 @@ $veryDarkBlue-bgTop: hsl(232, 19%, 15%);
 $darkDesatBlue: hsl(228, 28%, 20%);
 $desatBlue-text: hsl(228, 34%, 66%);
 
+$darkThemeHover: hsl(228, 28%, 30%);
+$lightThemeHover: hsl(230, 31%, 90%);
+
 $font-stack: 'Inter', sans-serif;
 
 // Reset
@@ -84,7 +87,7 @@ $font-stack: 'Inter', sans-serif;
 
 // Transition Mixins
 @mixin transition {
-  transition: color 2.5s ease, background-color 2.5s ease;
+  transition: color 2s ease, background-color 2s ease;
 }
 
 // Media Query Mixin
